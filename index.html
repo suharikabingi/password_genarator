@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <img src="images/logo.png" alt="Logo" class="logo">
+      <h1>Password Generator</h1>
+    </header>
+
+    <section class="panel">
+      <label for="length">Length: <span id="lengthValue">16</span></label>
+      <input id="length" type="range" min="4" max="64" value="16">
+
+      <div class="options">
+        <label><input type="checkbox" id="lower" checked> Lowercase</label>
+        <label><input type="checkbox" id="upper" checked> Uppercase</label>
+        <label><input type="checkbox" id="numbers" checked> Numbers</label>
+        <label><input type="checkbox" id="symbols" checked> Symbols</label>
+      </div>
+
+      <div class="actions">
+        <button id="generate">Generate</button>
+        <button id="copy">Copy</button>
+      </div>
+
+      <output id="result" class="result" aria-live="polite">Your secure password will appear here</output>
+    </section>
+
+    <footer class="footer">
+      <p>Simple, offline password generator.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
